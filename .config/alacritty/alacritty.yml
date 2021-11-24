@@ -1,4 +1,9 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator
+
+# Environment variables
+env:
+  TERM: xterm-256color
+
 window:
 # Window padding (changes require restart)
   padding:

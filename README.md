@@ -1,18 +1,17 @@
-===================================
-     _       _    __ _ _<br />
-  __| | ___ | |_ / _(_) | ___  ___<br />
- / _` |/ _ \| __| |_| | |/ _ \/ __|<br />
-| (_| | (_) | |_|  _| | |  __/\__ \<br />
- \__,_|\___/ \__|_| |_|_|\___||___/<br />
+```
+     _       _    __ _ _
+  __| | ___ | |_ / _(_) | ___  ___
+ / _` |/ _ \| __| |_| | |/ _ \/ __|
+| (_| | (_) | |_|  _| | |  __/\__ \
+ \__,_|\___/ \__|_| |_|_|\___||___/
 
-===================================
-
-## My current dotfiles 17/11/2021
+```
+---
+# My dotfiles
 Very minimal config
 Color scheme: Nord
 
-Systems tested: Ubuntu, Kali
-
+Some dependency config like picom or polybar will only work on Arch.
 ### Dependencies:
 - zsh
 - picom
@@ -23,8 +22,6 @@ Systems tested: Ubuntu, Kali
 - NeoVim
 - Nerd Font
 - nitrogen
-- flameshot
-- gpick
 - colorls
 
 ### Usage:
