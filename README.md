@@ -17,14 +17,19 @@ Some dependency config like picom or polybar will only work on Arch.
 - picom
 - polybar
 - awesomeWM
-  - Collision: https://github.com/Elv13/collision
+  - Collision:
+  ```
+  cd ~/.config/awesome
+  git clone https://github.com/Elv13/collision
+  ```
 - rofi
+  - Custom rofi theme:
+  ```
+  cd ~/.config/rofi
+  sudo mv nord.conf /usr/share/rofi/themes
+  ```
 - NeoVim
 - Nerd Font
 - nitrogen
 - colorls
-
-### Usage:
-Custom Rofi theme:
-Copy the nord.conf file to /usr/share/rofi/themes
 
