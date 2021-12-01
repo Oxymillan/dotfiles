@@ -11,7 +11,6 @@
 Very minimal config
 Color scheme: Nord
 
-Some dependency config like picom or polybar will only work on Arch.
 ### Dependencies:
 - zsh
 - picom
@@ -32,4 +31,5 @@ Some dependency config like picom or polybar will only work on Arch.
 - Nerd Font
 - nitrogen
 - colorls
+- ranger
 

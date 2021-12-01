@@ -32,7 +32,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 ;;;;;; Module Positioning
 modules-left = 1 2 3 4 5 6 7 8 9
-modules-right = cpu memory wlan disk audio battery temperature date wallpaper
+modules-right = cpu-info memory-info wlan disk audio battery temperature date wallpaper
 
 [settings]
 screenchange-reload = true
