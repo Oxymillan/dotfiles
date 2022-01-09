@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	  alacritty
 
 # program launcher
-super + @space
-	rofi -show drun
+~super + @space
+  	rofi -show drun
 
 super + b
     firefox
@@ -125,3 +125,11 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# brightness
+#
+
+XF86MonBrightness{Up,Down}
+    brightnessctl s 100{+,-}
+

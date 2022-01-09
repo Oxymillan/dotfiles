@@ -40,4 +40,4 @@ xrandr --output Virtual-1 --mode 1920x1080
 picom -f &
 
 # Execute DWM
-exec dwm
+exec bspwm

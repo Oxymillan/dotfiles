@@ -53,6 +53,10 @@ a {
   color: #D8DEE9;
 }
 
+a:hover{
+  color: orange;
+}
+
 li {
   list-style-type: none;
 }
