@@ -130,6 +130,23 @@ super + {Left,Down,Up,Right}
 # brightness
 #
 
-XF86MonBrightness{Up,Down}
-    brightnessctl s 100{+,-}
+XF86MonBrightnessUp
+    brightnessctl s 100+
+
+XF86MonBrightnessDown
+    brightnessctl s 100-
+
+#
+# Volume
+#
+
+XF86AudioLowerVolume
+    pulsemixer --change-volume -5
+
+
+XF86AudioRaiseVolume
+    pulsemixer --change-volume +5
+
+XF86AudioMute
+    pulsemixer --toggle-mute
 
