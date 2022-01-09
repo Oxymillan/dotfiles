@@ -14,7 +14,7 @@
 include-file = ~/.config/polybar/modules.ini
 include-file = ~/.config/polybar/colors-dark.ini
 
-[bar/awesome]
+[bar/bspwm]
 monitor = ${env:MONITOR:HDMI-1}
 width = 99.9%
 height = 36
