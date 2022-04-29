@@ -10,10 +10,18 @@ window:
     x: 2
     y: 2
 
+  dimentions:
+    columns: 142
+    lines: 92
+
+  position:
+    x: 550
+    y: 250
+
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
   # Background opacity
-  opacity: 0.9
+  opacity: 1
 
   startup_mode: Windowed
 
@@ -26,7 +34,7 @@ window:
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history: 10000
+  history: 4000
 
   # Scrolling distance multiplier.
   multiplier: 3
@@ -34,38 +42,38 @@ scrolling:
 # Font configuration
 font:
   normal:
-    family: "MesloLGS NF"
+    family: "Hack Nerd Font"
     style: Regular
 
   # Bold font face
   bold:
-    family: "MesloLGS NF"
+    family: "Hack Nerd Font"
     style: Bold
 
   # Italic font face
   italic:
-    family: "MesloLGS NF"
+    family: "Hack Nerd Font"
     style: Italic
 
   # Bold italic font face
   bol_italic:
-    family: "MesloLGS NF"
+    family: "Hack Nerd Font"
     style: Bold Italic
 
   # Point size
-  size:
-    8.0
+  size: 12.0
 
-    #offset:
-  #  x: 0
-  #  y: 0
+  #offset:
+  #x: 0
+  #y: 0
 
   #glyph_offset:
-  #  x: 0
-  #  y: 0
+  #x: 0
+  #y: 0
+
 colors:
   primary:
-    background: "#2e3440"
+    background: "#000000"
     foreground: "#d8dee9"
     dim_foreground: "#a5abb6"
   cursor:
@@ -113,7 +121,7 @@ colors:
     white: "#aeb3bb"
 
   # Transparent cell backgrounds
-  transparent_background_colors: false
+  transparent_background_colors: true
 
   #selection:
   # This string contains all characters that are used as separators for
@@ -121,4 +129,4 @@ colors:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: false

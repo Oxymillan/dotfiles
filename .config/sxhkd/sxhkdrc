@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	  alacritty
+  	alacritty
 
 # program launcher
-~super + @space
-  	rofi -show drun
+super + @space
+    rofi -show drun
 
 super + b
     firefox
@@ -18,7 +18,7 @@ super + e
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	  pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys

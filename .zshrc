@@ -1,6 +1,10 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
+git_branch(){
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e  's/*\(.*\)/(\1)/'
+}
+
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
@@ -83,7 +87,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)──}$(venv_info)(%B%F{%(#.red.blue)}%n%(#.💀.㉿)%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
+  PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)──}$(venv_info)(%B%F{%(#.red.blue)}%n%(#.💀.㉿)%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]%F{yellow}$(git_branch)%f\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
     RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
 
     # enable syntax-highlighting
@@ -186,10 +190,17 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 fi
 
-# some more ls aliases
-alias ll='colorls -lA --sd --dark'
-alias la='ls -A'
-alias l='ls -CF'
+# some more aliases
+alias nvim='/home/oxy/Documents/Tools/./nvim.appimage'
+alias trash='rm -rf ~/.local/share/Trash/files'
+alias ls='exa --icons --color=auto'
+alias ll='exa -l -b -a -m -h --icons'
+alias lazygit='/home/oxy/go/bin/./lazygit'
+alias lc='exa -T -l -b -a -m -h --icons'
+alias obsidian='/home/oxy/Documents/Tools/Obsidian-0.12.19.AppImage'
+alias v='/home/oxy/Documents/Tools/./nvim.appimage'
+alias postman='/home/oxy/Documents/Tools/Postman/./Postman'
+alias r='ranger'
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -203,15 +214,13 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
+# refresh zsh every time the dir changes
+chpwd() {exec zsh}
+
 export NVM_DIR="/home/oxy/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [ -d "$HOME/.local/bin" ] ; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
-
-alias vim='nvim'
-export EDITOR='nvim'
-
-alias trash='rm -rf ~/.local/share/Trash/files'
 

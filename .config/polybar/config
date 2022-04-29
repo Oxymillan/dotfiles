@@ -15,24 +15,26 @@ include-file = ~/.config/polybar/modules.ini
 include-file = ~/.config/polybar/colors-dark.ini
 
 [bar/bspwm]
-monitor = ${env:MONITOR:HDMI-1}
-width = 99.9%
+monitor = ${env:MONITOR:eDP-1}
+monitor-fallback = ${env:MONITOR:HDMI-1}
+width = 100%
 height = 36
 border-color = ${primary-foreground}
 background = ${colors.background}
 foreground = ${colors.foreground}
 padding-left = 5
 padding-right = 5
-module-margin-left = 2
+module-margin-left = 1
 module-margin-right = 2
-font-0 = Montserrat:weight=SemiBold:size=10;2
-font-1 = Hack Nerd Font:size=12;2
-font-2 = Montserrat:weight=Medium:size=10;2
+font-0 = Montserrat:weight=SemiBold:size=11;2
+font-1 = Hack Nerd Font:weight=Medium:size=13;2
+font-2 = Montserrat:weight=Medium:size=13;2
+font-3 = TakaoPMincho:weight=Medium:size=13;2
 cursor-click = pointer
 cursor-scroll = ns-resize
 ;;;;;; Module Positioning
-modules-left = 1 2 3 4 5 6 7 8 9
-modules-right = cpu-info memory-info wlan disk audio battery temperature date wallpaper
+modules-left = bspwm
+modules-right = local-ip cpu memory-info wlan eth-info disk battery1 battery2 audio temperature date powermenu
 
 [settings]
 screenchange-reload = true
