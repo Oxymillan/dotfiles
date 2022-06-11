@@ -1,6 +1,5 @@
 ![my dotfiles](/images/text-1653692681800.png)
 
-Minimal and light config,
 Color scheme: Nord
 
 ### Dependencies:
@@ -9,7 +8,7 @@ Color scheme: Nord
 - picom
 - polybar
 - rofi
-  - Custom rofi theme:
+  - Custom rofi theme (optional)
   ```
   cd ~/.config/rofi
   sudo mv nord.conf /usr/share/rofi/themes
